@@ -3,7 +3,7 @@ import Night from "../../assets/Moon.png";
 
 function UpperHalf(){
     return(
-        <div className="h-[50%] w-full p-4 flex flex-col justify-center items-start ">
+        <div className="max-h-[30rem] w-full p-4 flex flex-col justify-center items-start ">
             <div className="flex flex-start w-full mt-7 ">
                 <input type="text" placeholder="Search.." className="px-4 py-2 rounded-tl-md rounded-bl-md basis-3/4 bg-white text-black " />
                 <button className="basis-1/6 block text-lg bg-sky-500 p-2 flex justify-center font-semibold rounded-br-md rounded-tr-md">

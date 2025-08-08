@@ -4,11 +4,11 @@ import WeakRow from "./WeakRow";
 
 function MainData(){
     return(
-        <div className=" flex flex-col justify-between py-4 items-center  basis-9/12 text-black h-full rounded-tr-3xl rounded-br-3xl bg-[#f6f6f8]">
+        <div className=" overflow-y-auto flex flex-col justify-start py-4 items-center  basis-9/12 text-black h-full rounded-tr-3xl rounded-br-3xl bg-[#f6f6f8]">
             
             <TopRow />
             <WeakRow />
-            <div>
+            <div className="font semi-bold text-2xl mt-8 text-left w-full px-12 py-12  ">
                 Today's Highlight
             </div>
             <HighlightRow />
