@@ -1,4 +1,4 @@
-import { configureStore , getDefaultMiddleware } from "@reduxjs/toolkit";
+import { configureStore, getDefaultMiddleware  } from "@reduxjs/toolkit";
 import forecastReducer from "./Slices/forecastSlice.ts"
 
  const store = configureStore({
@@ -9,5 +9,6 @@ import forecastReducer from "./Slices/forecastSlice.ts"
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({serializableCheck: false})
 })
 
+export type AppDispatch = typeof store.dispatch;
 
 export default store;
