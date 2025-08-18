@@ -1,4 +1,4 @@
-function HighlightCard({ footer , data , title } : {footer : string , data : string , title : string}){
+function HighlightCard({ footer , data , title } : {footer : string , data : string | number , title : string}){
     return(
 
         <div className="flex flex-col justify-between items-center  bg-white rounded-3xl p-2 h-[13rem] w-[18rem] ">

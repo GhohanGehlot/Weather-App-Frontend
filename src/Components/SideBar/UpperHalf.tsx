@@ -1,7 +1,14 @@
 import { AiOutlineSearch } from "react-icons/ai";
 import Night from "../../assets/Moon.png";
+import { useSelector } from "react-redux";
+import type ReduxState from "../../Interfaces/ReduxState";
+
+
 
 function UpperHalf(){
+
+    const currentData = useSelector((state: ReduxState) => state.forecast.data.currentData)
+
     return(
         <div className="max-h-[30rem] w-full p-4 flex flex-col justify-center items-start ">
             <div className="flex flex-start w-full mt-7 ">
@@ -20,7 +27,7 @@ function UpperHalf(){
 
             <div className="flex flex-col mt-3 ">
                 <div className=" text-8xl  text-black flex flex-row item-start ">
-                   <div>25.4</div>  
+                   <div>{currentData.temp_c}</div>  
                    <div className="text-4xl">°C</div>
                 </div>
 

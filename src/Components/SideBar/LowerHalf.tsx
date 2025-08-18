@@ -1,8 +1,13 @@
 import { AiFillCloud } from "react-icons/ai";
 import { BsDropletFill } from "react-icons/bs";
 import { MdLocationPin } from "react-icons/md";
+import { useSelector } from "react-redux";
+import type ReduxState from "../../Interfaces/ReduxState";
 
 function LowerHalf(){
+
+    const currentData = useSelector((state: ReduxState) => state.forecast.data.currentData)
+
     return(
         <div className="h-[50%] w-full p-4 flex flex-col justify-between">
 
@@ -13,7 +18,7 @@ function LowerHalf(){
                         <AiFillCloud />
                     </div>
                     <div>
-                        Partially Cloudy 
+                       {currentData.condition}
                     </div>
 
                 </div>
@@ -23,7 +28,7 @@ function LowerHalf(){
                         <BsDropletFill />
                     </div>
                     <div>
-                        Perc - 10%
+                        Perc - {currentData.chance_of_rain}%
                     </div>
                 </div>
 
